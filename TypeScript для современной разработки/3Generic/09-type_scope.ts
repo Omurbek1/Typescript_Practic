@@ -6,7 +6,7 @@ export function createMap<T>(list:T[]) {
   
       for (let el of list) {
   
-        result.push(cb(el))
+        result.push(cb  as U (el))
   
       }
   
