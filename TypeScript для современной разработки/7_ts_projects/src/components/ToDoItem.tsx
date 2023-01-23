@@ -1,14 +1,12 @@
 import React from "react"
-interface ToDoItemProps {
-    id: string,
-    title: string,
-    completed: boolean,
-   
+import { ToDo} from './types';
 
+interface ToDoItemProps extends ToDo {
+    style?:React.CSSProperties
 }
-const ToDoItem = ({ id, title, completed }: ToDoItemProps) => {
+const ToDoItem = ({ id, title, completed ,style={}}: ToDoItemProps) => {
     return (
-        <li>
+        <li style={{color:'red',...style}}>
             <input type='checkbox' checked={completed} />
             <span>{title}</span>
             <span>&times;</span>
