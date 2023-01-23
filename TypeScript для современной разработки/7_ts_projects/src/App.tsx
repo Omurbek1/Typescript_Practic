@@ -1,6 +1,6 @@
 import { type } from '@testing-library/user-event/dist/type';
 import React, { useState,useEffect } from 'react';
-import ToDoItem from './components/ToDoItem';
+import ToDOList from './components/ToDoList';
 import { NewToDoForm } from './components/NewToDoForm';
 import { ToDo } from "./components/types"
 
@@ -41,9 +41,7 @@ function App() {
         handleClick={AddTodo}
         value={text}
       />
-      <ToDoItem id='112' completed={false} title='jhello' style={{
-        border: '1px solid white'
-      }} />
+      <ToDOList list={todos} />
     </div>
   );
 }
